@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import jsonify,request
 from models import db, SwiftCode
 from setupdb import app
 
@@ -97,4 +97,4 @@ def delete_swift_code(swift_code):
     return jsonify({"message": "SWIFT code deleted successfully"}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=8000)
